@@ -32,7 +32,7 @@ app.post("/api/create-transaction", async (req, res) => {
     const {amount}  = req.body;
     const buyOrder = Date.now().toString();
     const sessionId = Date.now().toString();
-    const returnUrl = "http://localhost:5173/success"; // Asegúrate de que esta URL esté registrada en el portal de Transbank
+    const returnUrl = "https://react-nodejs-webpay.netlify.app/success"; // Asegúrate de que esta URL esté registrada en el portal de Transbank
 
     console.log("Creating transaction with:", {
       buyOrder,
