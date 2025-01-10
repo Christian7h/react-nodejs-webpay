@@ -18,8 +18,7 @@ function Success() {
           setStatus('error');
           return;
         }
-
-        const response = await axios.post('http://localhost:3000/api/confirm-transaction', { token });
+        const response = await axios.post('https://backend-react-nodejs-webpay.onrender.com/api/confirm-transaction', { token });
         
         if (response.data.status === 'AUTHORIZED') {
           setStatus('success');
